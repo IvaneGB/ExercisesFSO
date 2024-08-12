@@ -25,13 +25,3 @@ sequenceDiagram
     deactivate server
 
     Note right of browser: El navegador renderiza las notas existentes usando JavaScript
-
-    Note right of browser: El usuario escribe una nueva nota en el input y hace clic en "Save"
-
-    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
-    activate server
-    Note right of server: El servidor recibe la nueva nota, la guarda en la base de datos, y responde con el JSON actualizado
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, { "content": "Nueva nota", "date": "2024-08-11" }, ... ]
-    deactivate server
-
-    Note right of browser: El navegador actualiza la lista de notas en la página sin recargarla
